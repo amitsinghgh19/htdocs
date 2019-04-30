@@ -92,8 +92,8 @@
 			event.preventDefault();
 			
 			var get_video_id = $('.youtube_video_id').val();
-
-			var ajax_url = 'https://amitsinghgh19.github.io/htdocs/?id='+get_video_id;
+			//http://www.youtube.com/get_video_info?html5=1&video_id='.$youtube_id
+			var ajax_url = 'http://www.youtube.com/get_video_info?html5=1&video_id='+get_video_id;
 			 
 			$.get(ajax_url, function(d1) 
 			{	
