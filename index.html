@@ -92,10 +92,20 @@
 			event.preventDefault();
 			
 			var get_video_id = $('.youtube_video_id').val();
-			//var proxyurl = "https://cors-anywhere.herokuapp.com/";
+			var proxyurl = "https://cors-anywhere.herokuapp.com/";
 			//http://www.youtube.com/get_video_info?html5=1&video_id='.$youtube_id
 			var ajax_url ='https://www.youtube.com/get_video_info?html5=1&video_id='+get_video_id;
-			//fetch(proxyurl + url);
+			fetch(proxyurl + ajax_url)
+			.then(response => response.text())
+	    	.then(function (response) {
+	        // var results = CountryList[i].data;
+	        console.log(response);
+	        CountryList = JSON.parse(response); 
+	        console.log(response);
+	
+	          });
+
+
 			$.get(ajax_url, function(d1) 
 			{	
 				
