@@ -98,8 +98,7 @@
 			fetch(proxyurl + ajax_url)
 			.then(response => response.text())
 	    	.then(function (response) {
-	        // var results = CountryList[i].data;
-	        console.log(response);
+	        console.log("response is-"+response);
 	        //responseJ = JSON.parse(response); 
 	        //console.log(response);
 	
@@ -111,7 +110,7 @@
 				
 				var data = youtube_data_parser(d1)
 				console.log(ajax_url);
-				console.log(data);
+				console.log("data response is-"+data);
 				 
 				var video_data = data.video_info;
 
